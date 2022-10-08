@@ -5,6 +5,6 @@ package stack.and.queue;
 
 public class App {
     public static void main(String[] args) {
-        System.out.println(new Calculator().solve("100 - 2001+2-1 + 4 "));
+        System.out.println(new Calculator().solve("10 + 20 * 2 "));
     }
 }

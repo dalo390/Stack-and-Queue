@@ -7,8 +7,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+    @Test void calculatorTestOne() {
+        Calculator classUnderTest = new Calculator();
+        assertThrows(ArithmeticException.class, () -> classUnderTest.solve("foo / 30 + 7"));
+    }
+
+    @Test void calculatorTestTwo() {
+        Calculator classUnderTest = new Calculator();
+        assertEquals(50, classUnderTest.solve("10 + 20 * 2"));
     }
 }

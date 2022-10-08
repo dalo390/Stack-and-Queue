@@ -25,10 +25,8 @@ public class Calculator {
 
         digitsStack = digits(digitsArray);
 
-
         while(operationsStack.size() != 0){
             String operation = operationsStack.pop();
-
             switch(operation) {
                 case "+":
                     digitsStack.push(digitsStack.pop() + digitsStack.pop());
@@ -44,11 +42,11 @@ public class Calculator {
                     digitsStack.push(d2 / d1);
                     break;
                 case "*":
-                    digitsStack.push(digitsStack.pop() + digitsStack.pop());
+                    digitsStack.push(digitsStack.pop() * digitsStack.pop());
                     break;
             }
-        }        
-        
+        }    
+        System.out.println(digitsStack.peep());    
         return digitsStack.pop();
         
     }
